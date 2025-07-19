@@ -11,15 +11,15 @@
 // Підказка: prompt завжди повертає рядок (String), тому перед перевіркою
 // перетворіть значення на число за допомогою Number().
 // ------------------------------------------------
-const answer = +prompt('Введіть рандомне число');
-if (answer === 10) {
+let value = +prompt('Введіть рандомне число');
+if (value === 10) {
   alert('Вірно');
 } else {
   alert('Невірно');
 }
 // ------------------------------------------------
-const answer = +prompt('Введіть рандомне число');
-alert(answer === 10 ? 'Вірно' : 'Невірно');
+let numeric = +prompt('Введіть рандомне число');
+alert(numeric === 10 ? 'Вірно' : 'Невірно');
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Task 2
 // У змінній min лежить випадкове число від 0 до 59.
@@ -83,13 +83,13 @@ const formatMinutes = remainderMinutes.toString().padStart(2, '0');
 console.log(`${formatHours}:${formatMinutes}`);
 // ------------------------------------------------
 // це рішення від ШІ (мені дуже сподобалось, але я чьогось не додумався до цього сам)
-function formatTime(totalMinutes) {
-  const h = String(Math.floor(totalMinutes / 60)).padStart(2, '0');
-  const m = String(totalMinutes % 60).padStart(2, '0');
+function formatTime(totalMinuts) {
+  const h = String(Math.floor(totalMinuts / 60)).padStart(2, '0');
+  const m = String(totalMinuts % 60).padStart(2, '0');
   return `${h}:${m}`;
 }
-const minutes = prompt('Введіть довільну кількість мінут');
-console.log(formatTime(minutes));
+const minuts = prompt('Введіть довільну кількість мінут');
+console.log(formatTime(minuts));
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Task 5
 // Напишіть код, який запитуватиме у користувача
@@ -163,16 +163,16 @@ function getСomparison(a, b) {
   }
 }
 // ------------------------------------------------
-function getСomparison(a, b) {
-  if (a !== Number(a) || b !== Number(b)) {
+function getСomparisons(c, d) {
+  if (c !== Number(c) || d !== Number(d)) {
     return 'Not a number';
   }
-  return a > b ? b : a;
+  return c > d ? d : c;
 }
-console.log(getСomparison(101, 55));
-console.log(getСomparison(11, 3));
-console.log(getСomparison('11', 6));
-console.log(getСomparison('fff', 'ggg'));
+console.log(getСomparisons(101, 55));
+console.log(getСomparisons(11, 3));
+console.log(getСomparisons('11', 6));
+console.log(getСomparisons('fff', 'ggg'));
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Task 9
 // Напишіть функцію isAdult(age), яка  приймає число - вік користувача і повертає true,
@@ -191,10 +191,10 @@ function isAdult(age) {
 }
 // ------------------------------------------------
 // це рішення від ШІ (мені дуже сподобалось, але я чогось не додумався до цього сам)
-function isAdult(age) {
-  return age >= 18 || confirm('Вам є 18 років?');
+function isAdults(ages) {
+  return ages >= 18 || confirm('Вам є 18 років?');
 }
-console.log(isAdult(10));
+console.log(isAdults(10));
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // Task 10
 // Напишіть функцію fizzBuzz(num), яка приймає число і перевіряє кожне число від 1 до num:
@@ -216,13 +216,13 @@ function fizzBuzz(num) {
 fizzBuzz(15);
 // ------------------------------------------------
 // це рішення від ШІ (мені дуже сподобалось, але я чогось не додумався до цього сам)
-function fizzBuzz(num) {
-  for (let i = 1; i <= num; i++) {
+function fizzBuzzs(nums) {
+  for (let i = 1; i <= nums; i++) {
     let out = '';
     if (i % 3 === 0) out += 'fizz';
     if (i % 5 === 0) out += 'buzz';
     if (out) console.log(out, i);
   }
 }
-fizzBuzz(15);
+fizzBuzzs(15);
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
